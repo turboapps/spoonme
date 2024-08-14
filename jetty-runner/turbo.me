@@ -13,7 +13,7 @@
 meta title="Jetty Runner"
 meta namespace="jetty" 
 meta name="jetty-runner"
-
+meta tag=9.4.55.v20240627
 
 ###################################
 # Pull dependency images
@@ -21,9 +21,6 @@ meta name="jetty-runner"
 
 # Basic dependencies and tools
 
-# Use the latest jre:8, it is recommended that any projects using this are built using the same jre:8 update.
-# When updating to a newer jre:8.xxx the build should pull to the latest version.
-layer oracle/jre:8
 using turbo/turboscript-tools:2021.2.11
 
 
@@ -38,7 +35,7 @@ workdir c:\Workspace
 batch cmd 
     mkdir C:\Jetty
     cd C:\Jetty
-    wget -O jetty-runner.jar https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.4.9.v20180320/jetty-runner-9.4.9.v20180320.jar
+    wget -O jetty-runner.jar https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.4.55.v20240627/jetty-runner-9.4.55.v20240627.jar
 
 # isolate directories so they don't get faulted in to the native machine (VM-1999)
 isolate file:@SYSDRIVE@\jetty\ full
