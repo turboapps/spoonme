@@ -15,9 +15,9 @@
             "${env:LOCALAPPDATA}\Temp\Chocolatey",
             "${env:LOCALAPPDATA}\Nuget\Temp\Nuget",
             "${env:LOCALAPPDATA}\Nuget",
-            "C:\Python34",
+            "C:\Python3",
             "C:\wget",
-            "C:\7-zip") 
+            "${env:PROGRAMFILES(x86)}\7-zip") 
         Foreach($path in ($pathsToDelete | Where-Object { Test-Path $_ }))
         {
             Remove-Item $path -Recurse -Force 
